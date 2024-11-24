@@ -1,0 +1,192 @@
+/* Header Styling */
+header {
+  position: fixed; /* Makes the navbar sticky */
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.8); /* Transparent background for a sleek look */
+  backdrop-filter: blur(10px); /* Adds a blurred effect for modern aesthetics */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Container */
+nav {
+  max-width: 110rem;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s ease-in-out;
+  color: rgb(255, 255, 255);
+}
+
+/* Left Side Items */
+nav .left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Navigation Items */
+nav .nav-item {
+  position: relative;
+  padding: 0.5rem 0;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .nav-item a {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+nav .nav-item a:hover {
+  color: #ff6f61; /* Highlighted color for hover effect */
+  background: rgba(255, 255, 255, 0.1); /* Subtle hover background */
+}
+
+/* Right Side Items */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.right .nav-item a {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.user-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.2rem;
+  width: 3.2rem;
+  border: 1px solid rgb(255, 126, 139);
+  border-radius: 50%;
+  color: #ff6f61;
+  background: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(255, 126, 139, 0.3);
+}
+
+/* Mobile Styling */
+@media (max-width: 800px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .user-icon {
+    display: flex;
+  }
+}
+
+/* Mobile Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+  cursor: pointer;
+  width: 2.4rem;
+}
+
+.hamburger div {
+  background: white;
+  height: 0.3rem;
+  width: 100%;
+  border-radius: 0.2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+@media (max-width: 800px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 5.6rem;
+  right: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.mobile-menu.open {
+  height: calc(100vh - 5.6rem); /* Full height minus header height */
+}
+
+.mobile-menu .nav-item {
+  display: block;
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.mobile-menu .nav-item a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: white;
+}
+
+.mobile-menu .nav-item a:hover {
+  color: #ff6f61;
+}
+
+/* Responsiveness Adjustments */
+@media (max-width: 800px) {
+  /* Make header padding more compact on smaller screens */
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  /* Adjust the size of the nav items and hide left side on mobile */
+  .nav-item a {
+    font-size: 1.4rem;
+  }
+}
+
+/* For Extra Small Screens (below 480px) */
+@media (max-width: 480px) {
+  /* Adjust nav item text size for even smaller devices */
+  nav .nav-item a {
+    font-size: 1.2rem;
+  }
+
+  .user-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .hamburger {
+    width: 2rem;
+  }
+
+  .hamburger div {
+    height: 0.3rem;
+  }
+}

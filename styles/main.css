@@ -1,0 +1,254 @@
+/* General Layout */
+.main-body {
+  position: relative;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 6rem;
+}
+
+/* Option Cards */
+.option {
+  position: relative;
+  flex: 1 1 calc(25% - 15px);
+  max-width: calc(25% - 15px);
+  border-radius: 1.2rem;
+  overflow: hidden;
+  height: 24rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.option:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.option:hover .image img {
+  transform: scale(1.1);
+}
+
+/* Info Section */
+.info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 0 0 1.2rem 1.2rem;
+  padding: 1rem 2rem 1.6rem;
+}
+
+.info .title {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.info .description {
+  color: rgb(79, 79, 79);
+  font-size: 1.6rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Heading Styling */
+.desc-see-more {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading-2 {
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #ff6f61;
+}
+
+.heading-6 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* See More Button */
+.see-more {
+  background-color: transparent;
+  color: #ff6f61;
+  font-size: 1.6rem;
+  padding: 1rem;
+  font-weight: 400;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.see-more:hover {
+  color: #e85c50;
+}
+
+/* Collections Section */
+.collections-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 10rem;
+  justify-content: center;
+}
+
+.collection {
+  position: relative;
+  flex: 1 1 calc(25% - 15px);
+  max-width: calc(25% - 15px);
+  height: 32rem;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.collection:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Collection Image */
+.collection .image {
+  height: 100%;
+}
+
+.collection .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.collection:hover .image img {
+  transform: scale(1.1);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.05) 50%);
+  border-radius: 0.6rem;
+}
+
+.overlay-info {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/* Popular Localities */
+.popular-localities .title {
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: rgb(54, 54, 54);
+  margin-bottom: 3rem;
+}
+
+.localities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.locality {
+  padding: 1.2rem 1.5rem;
+  background: white;
+  border: 1px solid rgb(232, 232, 232);
+  border-radius: 0.8rem;
+  flex: 1 1 calc(30% - 15px);
+  max-width: calc(30% - 15px);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.locality:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.locality-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.locality-description {
+  font-size: 1.6rem;
+  color: rgb(79, 79, 79);
+}
+
+.locality .center {
+  font-size: 20px;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .option,
+  .collection {
+    flex: 1 1 calc(33.33% - 15px); /* 3 items per row */
+    max-width: calc(33.33% - 15px);
+    height: 22rem; /* Slightly smaller height */
+  }
+}
+
+@media (max-width: 768px) {
+  .option,
+  .collection {
+    flex: 1 1 calc(50% - 15px); /* 2 items per row */
+    max-width: calc(50% - 15px);
+    height: 20rem; /* Reduced height */
+  }
+}
+
+@media (max-width: 576px) {
+  .option,
+  .collection {
+    flex: 1 1 calc(100% - 15px); /* Stack items vertically */
+    max-width: calc(100% - 15px);
+    height: 18rem; /* Compact height */
+    margin-bottom: 1.5rem;
+  }
+
+  .info .title,
+  .info .description {
+    text-align: center; /* Center text for a better mobile view */
+  }
+}

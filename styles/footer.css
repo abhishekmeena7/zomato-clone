@@ -1,0 +1,194 @@
+footer {
+  width: 100%;
+  background: rgb(248, 248, 248);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.footer-data {
+  max-width: 110rem;
+  width: 100%;
+  padding: 4.8rem 2rem 2.2rem; /* Adjusted for smaller screens */
+  position: relative;
+}
+
+footer .footer-top {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  flex-wrap: wrap; /* Ensures elements wrap on smaller screens */
+}
+
+.footer-top img {
+  height: 2.8rem;
+  width: 13.2rem;
+}
+
+.footer-top .country-dropdown {
+  min-width: 10rem;
+  width: max-content;
+  cursor: pointer;
+  position: relative;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 0.6rem;
+  display: flex;
+  font-size: 1.6rem;
+  gap: 5px;
+  align-items: center;
+}
+
+.country-dropdown img {
+  height: 3rem;
+  width: auto;
+}
+
+footer .row {
+  display: flex;
+  flex-wrap: wrap; /* Enables wrapping for smaller screens */
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.middle .footer-links {
+  flex: 1;
+  min-width: 200px; /* Ensures a responsive minimum width */
+  max-width: 18%;
+  padding: 0px;
+}
+
+.middle .footer-title {
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0 0 1.2rem;
+}
+
+.middle ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.middle ul li {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: rgb(105, 105, 105);
+  margin: 0.5rem 0;
+  cursor: pointer;
+}
+
+.socials ul {
+  display: flex;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.footer-links .socials li {
+  margin: 0;
+  width: fit-content;
+}
+
+.socials li i {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-links .buttons img {
+  width: 13.7rem;
+  height: 4rem;
+}
+
+footer hr {
+  margin-top: 5rem;
+  border-top: solid 1px rgb(207, 207, 207);
+}
+
+footer .end {
+  font-size: 1.3rem;
+  color: rgb(79, 79, 79);
+  line-height: 1.7rem;
+  margin-top: 2.3rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-top img {
+    margin-bottom: 2rem;
+  }
+
+  .middle .footer-links {
+    max-width: 45%;
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-data {
+    padding: 4.8rem 2.4rem 2.2rem;
+  }
+
+  footer .footer-top {
+    align-items: flex-start;
+  }
+
+  footer .footer-top img {
+    margin-bottom: 2rem;
+  }
+
+  .middle .footer-links {
+    max-width: 50%;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+  }
+
+  .socials {
+    display: none;
+  }
+
+  footer .end {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .middle .footer-links {
+    max-width: 100%;
+  }
+
+  footer .end {
+    font-size: 1.1rem;
+  }
+
+  .footer-top .country-dropdown {
+    font-size: 1.4rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .footer-links .buttons img {
+    width: 10rem;
+    height: auto;
+  }
+}
